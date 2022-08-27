@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-import { images } from '../../constants'
-import './Header.scss';
+import { images } from "../../constants";
+import "./Header.scss";
 
 const Header = () => {
   return (
@@ -20,11 +20,30 @@ const Header = () => {
               <h1 className="head-text">Peter</h1>
             </div>
           </div>
-
+          <div className="tag-cmp app__flex">
+            <p className="p-text">Web Developer</p>
+            <p className="p-text">Full-Stack Developer Graduate</p>
+          </div>
         </div>
       </motion.div>
-    </div>
-  )
-}
 
-export default Header
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="app__header-img"
+      >
+        <img src={images.profile} alt="profile_bg" />
+        <motion.img
+        whileInView={{ scale: [0, 1] }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        className="overlay_circle" src={images.circle} alt="profile_circle">
+
+        </motion.img>
+      </motion.div>
+
+      <motion.div></motion.div>
+    </div>
+  );
+};
+
+export default Header;
