@@ -4,9 +4,19 @@ import { motion } from "framer-motion";
 import { images } from "../../constants";
 import "./Header.scss";
 
-const Header = () => {
-  return (
-    <div className="app__header__app__flex">
+const scaleVariants = {
+  whileInView: {
+    scale: [0, 1],
+    opacity: [0, 1],
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+    },
+  },
+};
+
+const Header = () => (
+    <div id="home" className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -20,6 +30,7 @@ const Header = () => {
               <h1 className="head-text">Peter</h1>
             </div>
           </div>
+
           <div className="tag-cmp app__flex">
             <p className="p-text">Web Developer</p>
             <p className="p-text">Full-Stack Developer Graduate</p>
@@ -34,16 +45,26 @@ const Header = () => {
       >
         <img src={images.profile} alt="profile_bg" />
         <motion.img
-        whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
-        className="overlay_circle" src={images.circle} alt="profile_circle">
-
-        </motion.img>
+          whileInView={{ scale: [0, 1] }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          className="overlay_circle"
+          src={images.circle}
+          alt="profile_circle"
+        />
       </motion.div>
 
-      <motion.div></motion.div>
+      <motion.div
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
+      >
+        {[images.javascript, images.node, images.react].map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={circle} alt="circle" />
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
-};
 
 export default Header;
