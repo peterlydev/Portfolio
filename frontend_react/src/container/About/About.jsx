@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
-
-import { images } from '../../constants'
+import { AppWrap } from '../../wrapper'
 
 import './About.scss';
 
@@ -13,16 +12,14 @@ const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-  const query = '*[_type == "abouts"]';
+  const query = '*[_type == "Abouts"]';
 
   client.fetch(query)
     .then((data) => {
       setAbouts(data)
     })
   }, []);
-  
 
-  
   return (
     <>
       <h2 className="head-text">
@@ -49,4 +46,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrap(About, 'about');
