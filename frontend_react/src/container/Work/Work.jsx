@@ -43,7 +43,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+        {[ "Python", "Vanilla JS", "React JS", "All"].map(
           (item, index) => (
             <div
               key={index}
@@ -115,4 +115,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(MotionWrap(Work, "app__works"), "work", "app__primarybg");
+export default AppWrap(MotionWrap(Work, "app__works"), "projects", "app__primarybg");
