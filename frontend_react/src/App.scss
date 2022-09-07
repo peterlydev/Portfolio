@@ -1,3 +1,10 @@
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
 .app {
     background-color: var(--primary-color);
     font-family: var(--font-base);
@@ -70,8 +77,25 @@
       font-size: 2rem;
     }
   }
+
+  #headline, #about, #exp1, #exp2, #footer {
+    margin: 1rem;
+    font-size: 1.2rem;
+
+  }
+
+  .bio {
+    width: 70%;
+    margin: 1rem auto;
+
+    @media screen and (max-width: 912px) {
+      width: 100%;
+    }
+  }
+
   
-  .p-text {
+  
+  .p-text, .downloadCV {
     font-size: 0.8rem;
     text-align: left;
     color: var(--gray-color);

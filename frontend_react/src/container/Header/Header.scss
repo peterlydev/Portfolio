@@ -60,19 +60,22 @@
     flex-direction: column;
   
     .badge-cmp,
-    .tag-cmp {
+    .tag-cmp, .downloadCV {
       padding: 1rem 2rem;
       background: var(--white-color);
       border-radius: 15px;
       flex-direction: row;
       width: auto;
-      margin-top: 5rem; 
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
+
+    .badge-cmp {
+      margin-top: 5rem;
+    }
   
-    .tag-cmp {
+    .tag-cmp, .downloadCV {
       flex-direction: column;
-      margin-top: 3rem;
+      margin-top: 1.5rem;
   
       p {
         width: 100%;
@@ -80,6 +83,20 @@
         text-align: right;
       }
     }
+
+    .downloadCV {
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: var(--gray-color);
+
+      &:hover {
+        background-color: #f5f5f5;
+        font-weight: 700;
+        color: var(--black-color);
+      }
+    }
+
   
     span {
       font-size: 2.5rem;
