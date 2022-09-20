@@ -36,7 +36,7 @@ const Header = () => {
             <p className="p-text">Full-Stack Developer Graduate</p>
           </div>
 
-          <a href={images.cv} download target="blank_" className="downloadCV">Download My CV</a>
+          <a href={images.cv} download='PeterLyDev' target="blank_" className="downloadCV">Download My CV</a>
         </div>
       </motion.div>
 

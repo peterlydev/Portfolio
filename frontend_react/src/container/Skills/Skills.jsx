@@ -27,6 +27,8 @@ const Skills = () => {
     <>
       <h2 className="head-text">Skills & Experiences</h2>
 
+      <p className="headline">The skills you see below are the technologies I have knowledge of and have used within my projects: </p>
+
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {skills.map((skill) => (

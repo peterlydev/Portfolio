@@ -24,8 +24,8 @@ const About = () => {
       </h2>
       <div className="bio">
       <p className="p-text" id="headline">
-        I am a Full-Stack Developer graduate from Futureproof. Born and bred in
-        London and I love creating web & mobile applications using different
+        I am a Full-Stack Developer graduate from Futureproof. I live in London, United Kingdom 
+        and I love creating web & mobile applications using different
         technologies.
       </p>
       <p className="p-text" id="about">
