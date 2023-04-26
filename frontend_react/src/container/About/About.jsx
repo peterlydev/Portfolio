@@ -24,9 +24,7 @@ const About = () => {
       </h2>
       <div className="bio">
       <p className="p-text" id="headline">
-        I am a Full-Stack Developer graduate from Futureproof. I live in London, United Kingdom 
-        and I love creating web & mobile applications using different
-        technologies.
+        I am a Full-Stack Developer graduate from La Fosse Academy. I love creating web & mobile applications using different technologies. Currently seeking for a role in Web Development.
       </p>
       <p className="p-text" id="about">
         I started my coding journey due to my love of technology. Ever since I
@@ -50,7 +48,7 @@ const About = () => {
         I am ready to take on further challenges within the tech industry. You can see more of my projects below.
       </p>
       <p className="p-text" id="footer">
-        I have recently finished my 13-week coding bootcamp from Futureproof
+        I have completed my 13-week coding bootcamp from La Fosse Academy
         where I have learnt HTML, CSS, JavaScript, SQL, NoSQL, React, Redux,
         Python backend (Flask and Django), Node JS and Express API. I am
         currently open to work and ready to launch my tech career. I welcome the
